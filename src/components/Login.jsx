@@ -2,7 +2,7 @@
  * @Author: liujia
  * @Date: 2019-09-16 19:28:34
  * @Last Modified by: liujia
- * @Last Modified time: 2019-11-08 14:16:13
+ * @Last Modified time: 2019-11-12 15:34:58
  * @description: 当前用户登录情况
  */
 import React from 'react'
@@ -11,6 +11,7 @@ import LoginForm from './LoginForm'
 import { encrypt, sysInit } from '../utils/commonUtil'
 import { userLogin } from '../apis/user'
 import { setToken } from '../utils/storage'
+import { Avatar } from 'antd'
 
 class Login extends React.Component {
 
@@ -66,10 +67,11 @@ class Login extends React.Component {
   render () {
     const { loginModalVisible } = this.state
     return this.props.user ? (
-      <div></div>
+      <Avatar shape="square" icon="user" size="small"></Avatar>
     ) : (
-      <div className="login-container">
+      <div className="create-container">
         <span onClick={ this.showLoginModal } className="link-content">登录</span>
+        <span className="split-content">·</span>
         <span className="link-content">注册</span>
         <LoginForm
           wrappedComponentRef={ this.saveFormRef }

@@ -2,7 +2,7 @@
  * @Author: liujia
  * @Date: 2019-08-29 22:20:45
  * @Last Modified by: liujia
- * @Last Modified time: 2019-11-08 14:15:46
+ * @Last Modified time: 2019-11-12 14:52:39
  * @description: 页面头部展现
  */
 import React from 'react'
@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Login from './Login'
 import { Input } from 'antd'
-import CommonIcon from './CommonIcon'
 import PropTypes from 'prop-types'
 
 const { Search } = Input
@@ -30,7 +29,7 @@ class Header extends React.Component {
       <header className="main-header">
         {/* 网站logo */}
         <Link className="logo flex-middle-height" to="/">
-          <CommonIcon name="note"></CommonIcon>
+          <img src="/note.png"></img>
           <span>众记</span>
         </Link>
         {/* 网站头部tab切换 */}
@@ -52,10 +51,12 @@ class Header extends React.Component {
           <Search placeholder="搜索众记" onSearch={(e) => this.handleSearch(e)}></Search>
         </div>
         {/* 写文章等 */}
-        <nav>
+        <nav className="create-container">
           <Link to="/">编书</Link>
+          <span className="split-content">·</span>
           <Link to="/">写文章</Link>
         </nav>
+        <span className="split-block">|</span>
         {/* 登录状态 */}
         <Login></Login>
       </header>

@@ -31,6 +31,9 @@ html,body{
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   color: $text-color;
+  a{
+    color: $link-color;
+  }
 }
 *{
   box-sizing: border-box;
@@ -85,10 +88,13 @@ html,body{
     align-items: center;
     .logo{
       font-size: 2.5rem;
-      margin-right: 1rem;
+      margin-right: 2rem;
+      img{
+        width: 2.5rem;
+      }
       span{
-        font-size: 1.9rem;
-        margin-left: 0.7rem;
+        font-size: 1.5rem;
+        margin-left: 1rem;
       }
     }
     .switch-tab{
@@ -102,8 +108,20 @@ html,body{
       }
     }
     .search-container{
-      width: 9rem;
+      width: 12rem;
       flex-shrink: 0;
+      margin-right: 2rem;
+    }
+    .create-container{
+      color: $link-color;
+      font-size: $big-font-size;
+      .split-content{
+        margin: 0 0.4rem;
+      }
+    }
+    .split-block{
+      color: $link-color;
+      margin: 0 1rem;
     }
   }
 }
