@@ -2,7 +2,7 @@
  * @Author: liujia
  * @Date: 2019-08-01 17:12:42
  * @Last Modified by: liujia
- * @Last Modified time: 2019-10-25 17:13:51
+ * @Last Modified time: 2019-11-12 21:34:03
  * @description: 书籍列表
  */
 import React from 'react'
@@ -21,7 +21,7 @@ class BookList extends React.Component {
   render () {
     return (
       <ListPageTemplate>
-        {/* 列表上方的赛选项 */}
+        {/* 列表上方的筛选项 */}
         <header>
           <nav>
             <ul>
