@@ -10,4 +10,34 @@
       }
     }
   }
+  .post-link{
+    padding: 15px 20px;
+    border-bottom: 1px solid $border-color-base;
+    display: block;
+    width: 100%;
+    .meta-row{
+      font-size: $small-font-size;
+      .meta-info{
+        display: flex;
+        .meta-item a{
+          color: $text-color-secondary;
+        }
+        .meta-item+.meta-item::before{
+          content: "·";
+          color: $text-color-secondary;
+        }
+      }
+    }
+    .title-row{
+      margin: .5rem 0 .7rem 0;
+      a{
+        font-size: $big-font-size;
+        color: #606060;
+        font-weight: 600;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

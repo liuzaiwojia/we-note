@@ -2,7 +2,7 @@
  * @Author: liujia
  * @Date: 2019-08-01 16:24:40
  * @Last Modified by: liujia
- * @Last Modified time: 2019-10-25 16:02:42
+ * @Last Modified time: 2019-11-13 16:54:36
  * @description: 正常页面的模板
  */
 import React from 'react'
@@ -47,7 +47,7 @@ class Page extends React.Component {
         <div className="content-container">
           <div className="post-container">
             {
-              plate === 'books' ? <BookList initData={ [] } focus={focus}></BookList> : <PostList initData={ [] } focus={focus}></PostList>
+              plate === 'books' ? <BookList initData={ [{id: '001'}, {id: '002'}] } focus={focus}></BookList> : <PostList initData={ [{id: '001'}] } focus={focus}></PostList>
             }
           </div>
           <div className="focus-container">
