@@ -14,9 +14,10 @@ $disabled-color : rgba(0, 0, 0, .25); // 失效色
 $text-color-in-dark: #E3E3E3;
 $selected-text-color: #1890ff;
 $border-radius-base: 4px; // 组件/浮层圆角
-$border-color-in-dark: rgba(255, 255, 255, 0.25); // 边框色
+$border-color-in-dark: rgba(31, 20, 20, 0.25); // 边框色
 $border-color-base: hsla(0,0%,59.2%,.1); // 边框色
 $box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // 浮层阴影
+$list-second-text-color: #606060;
 
 $head-height: 3.5rem;
 $large-font-size: 1.29rem;
@@ -26,12 +27,15 @@ $small-font-size: 0.86rem;
 
 html,body{
   width: 100%;
-  height: 100%;
   margin: 0px;
   padding: 0px;
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   color: $text-color;
+  background: #f4f5f5;
+  >div{
+    height: 100%;
+  }
   a{
     color: $link-color;
   }
@@ -77,17 +81,16 @@ html,body{
 }
 
 .page-container{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background: #f4f5f5;
   .header-container{
-    position: absolute;
+    position: fixed;
     top: 0px;
     z-index: 10;
   }
   .content-container{
     max-width: 960px;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: calc(3.5rem + 20px);
     margin: 0 auto;
     display: flex;

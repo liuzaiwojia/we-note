@@ -2,12 +2,13 @@
  * @Author: liujia
  * @Date: 2019-08-01 17:12:42
  * @Last Modified by: liujia
- * @Last Modified time: 2019-11-13 17:36:48
+ * @Last Modified time: 2019-11-13 22:22:09
  * @description: 书籍列表
  */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { Avatar } from 'antd'
 
 class BookList extends React.Component {
   constructor (props) {
@@ -36,18 +37,19 @@ class BookList extends React.Component {
           {
             this.props.initData.map(item => (
               <li key={item.id}>
-                <Link className="post-link" to="/">
+                {/* 这里用编程导航的方式-react不允许a标签中嵌套a标签 */}
+                <div className="post-link" to="/">
                   <div className="info-box">
                     <div className="info-row meta-row">
                       <ul className="meta-info">
                         <li className="meta-item">
-                          <Link>试验二小班主任</Link>
+                          <Link to="/">试验二小班主任</Link>
                         </li>
                         <li className="meta-item">
-                          <Link>1小时前</Link>
+                          <Link to="/">1小时前</Link>
                         </li>
                         <li className="meta-item">
-                          <Link>前端</Link>
+                          <Link to="/">前端</Link>
                         </li>
                       </ul>
                     </div>
@@ -55,10 +57,11 @@ class BookList extends React.Component {
                       <Link to="/">前端开发小结</Link>
                     </div>
                     <div className="info-row operate-row">
-                      点赞、收藏等
+                      <Avatar size={14} src="/like.png"></Avatar>
+                      <Avatar size={14} src="/star.png"></Avatar>
                     </div>
                   </div>
-                </Link>
+                </div>
               </li>
             ))
           }
