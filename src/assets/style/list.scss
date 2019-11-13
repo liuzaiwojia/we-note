@@ -1,0 +1,13 @@
+.list-container{
+  header{
+    padding: 0.8rem 20px;
+    border-bottom: 1px solid $border-color-base;
+    .nav-item+.nav-item{
+      &::before{
+        content: "|";
+        color: $border-color-base;
+        margin: 0 0.7rem;
+      }
+    }
+  }
+}

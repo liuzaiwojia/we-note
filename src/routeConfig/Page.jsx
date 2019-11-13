@@ -45,13 +45,13 @@ class Page extends React.Component {
           <Header plate={plate} focus={focus}></Header>
         </div>
         <div className="content-container">
-          <div className="focus-container">
-            <SideBar plate={plate} focus={focus}></SideBar>
-          </div>
           <div className="post-container">
             {
               plate === 'books' ? <BookList initData={ [] } focus={focus}></BookList> : <PostList initData={ [] } focus={focus}></PostList>
             }
+          </div>
+          <div className="focus-container">
+            <SideBar plate={plate} focus={focus}></SideBar>
           </div>
         </div>
       </div>

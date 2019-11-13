@@ -1,0 +1,75 @@
+.header-container{
+  width: 100%;
+  height: $head-height;
+  background: $component-background;
+  color: $text-color-in-dark;
+  .main-header{
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .logo{
+      font-size: 2.5rem;
+      margin-right: 2rem;
+      img{
+        width: 2.5rem;
+      }
+      span{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+      }
+    }
+    .switch-tab{
+      flex-grow: 1;
+      font-size: $large-font-size;
+      .tab-item{
+        padding: 0 1rem;
+        height: $head-height;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .search-container{
+      width: 12rem;
+      flex-shrink: 0;
+      margin-right: 2rem;
+    }
+    .user-icon-container{
+      .ant-popover-inner-content{
+        padding: 0;
+      }
+      .popover-nav-item-group{
+        padding: .5rem 0;
+        .popover-nav-item{
+          &:hover{
+            background: hsla(0,0%,94.9%,1);
+          }
+          a{
+            font-size: $big-font-size;
+            display: inline-block;
+            padding: .2rem 1rem;
+            width: 8rem;
+          }
+        }
+      }
+      .popover-nav-item-group+.popover-nav-item-group{
+        border-top: 1px solid $border-color-base;
+      }
+      .user-icon{
+        cursor: pointer;
+      }
+    }
+    .create-container{
+      color: $link-color;
+      font-size: $big-font-size;
+      .split-content{
+        margin: 0 0.4rem;
+      }
+    }
+    .split-block{
+      color: $link-color;
+      margin: 0 1rem;
+    }
+  }
+}

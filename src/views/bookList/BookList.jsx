@@ -2,12 +2,11 @@
  * @Author: liujia
  * @Date: 2019-08-01 17:12:42
  * @Last Modified by: liujia
- * @Last Modified time: 2019-11-12 21:34:03
+ * @Last Modified time: 2019-11-13 14:15:35
  * @description: 书籍列表
  */
 import React from 'react'
 import PropTypes from 'prop-types'
-import ListPageTemplate from '../../components/ListPageTemplate'
 import { Link } from 'react-router-dom'
 
 class BookList extends React.Component {
@@ -20,15 +19,15 @@ class BookList extends React.Component {
 
   render () {
     return (
-      <ListPageTemplate>
+      <div className="list-container">
         {/* 列表上方的筛选项 */}
         <header>
           <nav>
-            <ul>
+            <ul className="we-note-ul">
               <li>
-                <Link to="/">热门</Link>
-                <Link to="/">最新</Link>
-                <Link to="/">热榜</Link>
+                <Link className="nav-item" to="/">热门</Link>
+                <Link className="nav-item" to="/">最新</Link>
+                <Link className="nav-item" to="/">热榜</Link>
               </li>
             </ul>
           </nav>
@@ -48,7 +47,7 @@ class BookList extends React.Component {
             ))
           }
         </ul>
-      </ListPageTemplate>
+      </div>
     );
   }
 }

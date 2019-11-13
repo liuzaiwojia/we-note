@@ -1,0 +1,7 @@
+.side-bar-item{
+  background: white;
+  border-radius: 3px;
+}
+.side-bar-item + .side-bar-item{
+  margin-top: 20px;
+}
