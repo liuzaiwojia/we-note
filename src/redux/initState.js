@@ -2,7 +2,7 @@
  * @Author: liujia
  * @Date: 2019-08-13 08:52:06
  * @Last Modified by: liujia
- * @Last Modified time: 2019-10-10 11:30:57
+ * @Last Modified time: 2019-12-09 08:48:19
  * @description: 初始的state结构
  */
 export default {
@@ -19,6 +19,14 @@ export default {
     {
       key: 'posts',
       name: '文章'
+    },
+    {
+      key: 'topic',
+      name: '话题'
+    },
+    {
+      key: 'contact',
+      name: '联系人'
     }
   ],
   // 关注的内容的列表

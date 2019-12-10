@@ -39,5 +39,13 @@
         }
       }
     }
+    .operate-row{
+      display: flex;
+      align-items: center;
+      .operate-icon-item + .operate-icon-item::before{
+        content: "|";
+        color: $text-color-secondary;
+      }
+    }
   }
 }

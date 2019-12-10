@@ -2,7 +2,7 @@
  * @Author: liujia
  * @Date: 2019-08-01 17:12:42
  * @Last Modified by: liujia
- * @Last Modified time: 2019-11-13 22:22:09
+ * @Last Modified time: 2019-12-09 18:38:38
  * @description: 书籍列表
  */
 import React from 'react'
@@ -57,8 +57,14 @@ class BookList extends React.Component {
                       <Link to="/">前端开发小结</Link>
                     </div>
                     <div className="info-row operate-row">
-                      <Avatar size={14} src="/like.png"></Avatar>
-                      <Avatar size={14} src="/star.png"></Avatar>
+                      <span className="operate-icon-item">
+                        <Avatar size={14} src="/like.png"></Avatar>
+                        <span>578</span>
+                      </span>
+                      <span className="operate-icon-item">
+                        <Avatar size={14} src="/star.png"></Avatar>
+                        <span>216</span>
+                      </span>
                     </div>
                   </div>
                 </div>
